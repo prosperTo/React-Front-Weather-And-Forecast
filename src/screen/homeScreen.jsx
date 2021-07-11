@@ -38,7 +38,6 @@ class HomeScreen extends Component {
             if(this.props.positionToSearch !== 'Actual') url = url + '/' + this.props.positionToSearch
             const respData = await this.getLocationWeather(url)
             const date = new Date()
-            console.log(respData.data.data)
             this.setState({
                 data: {
                     weather: [respData.data.data.weather.main],
